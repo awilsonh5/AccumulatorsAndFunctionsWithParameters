@@ -255,7 +255,6 @@ def digits_in_power(n, k):
     power_sum = sum_of_digits(power)
     return power_sum
 
-
     # ------------------------------------------------------------------
     # DONE: 6. Implement and test this function.
     #
@@ -269,7 +268,7 @@ def digits_in_power(n, k):
 def run_test_fancy_sums_of_digits():
     """ Tests the   fancy_sums_of_digits   function. """
     # ------------------------------------------------------------------
-    # TODO: 7. Implement this function.
+    # DONE: 7. Implement this function.
     #   It TESTS the  fancy_sums_of_digits  function defined below.
     #   Include at least **   3   ** tests.
     #
@@ -280,6 +279,27 @@ def run_test_fancy_sums_of_digits():
     print('--------------------------------------------------')
     print('Testing the   fancy_sums_of_digits   function:')
     print('--------------------------------------------------')
+
+    # Test 1
+    actual1 = 1
+    fancy1 = fancy_sums_of_digits(10)
+    print('Test 1 expected:', actual1)
+    print('       actual:  ', fancy1)
+    print()
+
+    # Test 2
+    actual2 = 19084
+    fancy2 = fancy_sums_of_digits(2)
+    print('Test 2 expected:', actual2)
+    print('       actual:  ', fancy2)
+    print()
+
+    # Test 3
+    actual3 = 124309
+    fancy3 = fancy_sums_of_digits(35)
+    print('Test 3 expected:', actual3)
+    print('       actual:  ', fancy3)
+    print()
 
     # ------------------------------------------------------------------
     # HINT:  For your 1st test, consider  n=10.  Figure out BY HAND
@@ -314,8 +334,18 @@ def fancy_sums_of_digits(n):
             -- the sum of the digits in (X ** Y) is 124309 (trust me!)
             -- so this function returns 124309.
     """
+
+    a = n**1000
+    b = n**999
+    x = sum_of_digits(a)
+    y = sum_of_digits(b)
+    c = x**y
+    z = sum_of_digits(c)
+    return z
+
+
     # ------------------------------------------------------------------
-    # TODO: 8. Implement and test this function.
+    # DONE: 8. Implement and test this function.
     #
     ####################################################################
     # IMPORTANT: CALL, as many times as needed,
