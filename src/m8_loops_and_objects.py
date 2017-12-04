@@ -147,7 +147,7 @@ def print_sequence3():
       100.
     """
     # ------------------------------------------------------------------
-    # DONE: 6. Implement this function, per its doc-string above.
+    # DONE:6. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # ------------------------------------------------------------------
