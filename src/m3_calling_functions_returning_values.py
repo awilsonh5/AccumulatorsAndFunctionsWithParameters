@@ -7,8 +7,8 @@ This module demonstrates and practices:
   -- UNIT TESTING.
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Andrew Wilson.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import m3t_tester
 
@@ -37,7 +37,7 @@ def main():
 def run_test_sum_of_digits():
     """ Tests the  sum_of_digits   function. """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement this TEST function, as follows:
+    # DONE: 2. Implement this TEST function, as follows:
     #
     #  Step 1:  This TEST function tests the  sum_of_digits  function.
     #    So read the doc-string of the  sum_of_digits  function
@@ -66,11 +66,32 @@ def run_test_sum_of_digits():
     answer = sum_of_digits(826)
     print('Test 1 expected:', expected)
     print('       actual:  ', answer)
-
+    print()
     # ------------------------------------------------------------------
     # TO DO: 2 (continued).
     # Below this comment, add 3 more test cases of your own choosing.
     # ------------------------------------------------------------------
+
+    # Test 2
+    expected2 = 12
+    answer2 = sum_of_digits(246)
+    print('Test 2 expected:', expected2)
+    print('       actual:  ', answer2)
+    print()
+
+    # Test 3
+    expected3 = 23
+    answer3 = sum_of_digits(1598)
+    print('Test 3 expected:', expected3)
+    print('       actual:  ', answer3)
+    print()
+
+    # Test 4
+    expected4 = 9
+    answer4 = sum_of_digits(702)
+    print('Test 4 expected:', expected4)
+    print('       actual:  ', answer4)
+    print()
 
 
 def sum_of_digits(number):
@@ -109,7 +130,7 @@ def sum_of_digits(number):
 def run_test_digits_in_cube():
     """ Tests the   digits_in_cube   function. """
     # ------------------------------------------------------------------
-    # TODO: 3. Implement this function.
+    # DONE: 3. Implement this function.
     #   It TESTS the  digits_in_cube  function defined below.
     #   Include at least **   3   ** tests.
     #
@@ -134,6 +155,26 @@ def run_test_digits_in_cube():
     print('Testing the   digits_in_cube   function:')
     print('-----------------------------------------------------')
 
+    # Test 1
+    expect1 = 8
+    cube1 = digits_in_cube(2)
+    print('Test 1 expected:', expect1)
+    print('       actual:  ', cube1)
+    print()
+
+    # Test 2
+    expect2 = 8
+    cube2 = digits_in_cube(5)
+    print('Test 2 expected:', expect2)
+    print('       actual:  ', cube2)
+    print()
+
+    # Test 3
+    expect3 = 1
+    cube3 = digits_in_cube(10)
+    print('Test 3 expected:', expect3)
+    print('       actual:  ', cube3)
+    print()
 
 def digits_in_cube(n):
     """
@@ -144,8 +185,13 @@ def digits_in_cube(n):
       If the integer (n) is 5    (so n cubed is 125),
       this function returns (1 + 2 + 5), which is 8.
     """
+
+    cubed = n*n*n
+    cubed_sum = sum_of_digits(cubed)
+    return cubed_sum
+
     # ------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #   That is called TEST-DRIVEN DEVELOPMENT (TDD).
     #
@@ -170,6 +216,12 @@ def run_test_digits_in_power():
     print('Testing the   digits_in_power   function:')
     print('--------------------------------------------------')
 
+    # Test 1
+    exp1 = 8
+    pow1 = digits_in_power(2,3)
+    print('Test 1 expected:', exp1)
+    print('       actual:  ', pow1)
+    print()
 
 def digits_in_power(n, k):
     """
@@ -182,6 +234,16 @@ def digits_in_power(n, k):
       this function returns 18
       since 12 to the 3rd power is 1728 (whose digits sum to 18).
     """
+
+    power = n
+    for q in range(k):
+        power = power*n
+    power_sum = sum_of_digits(power)
+    return power_sum
+
+
+
+   power_sum = sum_of_digits(power)
     # ------------------------------------------------------------------
     # TODO: 6. Implement and test this function.
     #
