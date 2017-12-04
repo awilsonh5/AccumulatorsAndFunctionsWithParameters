@@ -9,6 +9,7 @@ Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
 
 import math
 
+
 def main():
     """ Calls the   TEST   functions in this module. """
     run_test_sum_cosines()
@@ -68,11 +69,6 @@ def sum_cosines(n):
         total = total + o
     return total
 
-
-
-
-
-
     # ------------------------------------------------------------------
     # DONE: 3. Implement and test this function.
     #   Note that you should write its TEST function first (above).
@@ -86,7 +82,7 @@ def sum_cosines(n):
 def run_test_sum_square_roots():
     """ Tests the   sum_square_roots   function. """
     # ------------------------------------------------------------------
-    # TODO: 4. Implement this function.
+    # DONE: 4. Implement this function.
     #   It TESTS the  sum_square_roots  function defined below.
     #   Include at least **   3   ** tests.
     #
@@ -97,6 +93,27 @@ def run_test_sum_square_roots():
     print('--------------------------------------------------')
     print('Testing the   sum_square_roots   function:')
     print('--------------------------------------------------')
+
+    # Test 1
+    expected1 = 11.854408
+    actual1 = sum_square_roots(5)
+    print('Test 1 expected:', expected1)
+    print('       actual:  ', actual1)
+    print()
+
+    # Test 2
+    expected2 = 31.77494373
+    actual2 = sum_square_roots(10)
+    print('Test 2 expected:', expected2)
+    print('       actual:  ', actual2)
+    print()
+
+    # Test 3
+    expected3 = 23.06016709
+    actual3 = sum_square_roots(8)
+    print('Test 3 expected:', expected3)
+    print('       actual:  ', actual3)
+    print()
 
 
 def sum_square_roots(n):
@@ -112,8 +129,17 @@ def sum_square_roots(n):
          sqrt(2) + sqrt(4) + sqrt(6) + sqrt(8) + sqrt(10),
       which is about 11.854408.
     """
+
+    total = 0
+    c = 2*n
+    for k in range(c+1):
+        if k % 2 == 0:
+            p = math.sqrt(k)
+            total = total + p
+    return total
+
     # ------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # DONE: 5. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #   That is called TEST-DRIVEN DEVELOPMENT (TDD).
     #
